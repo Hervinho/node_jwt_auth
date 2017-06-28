@@ -52,7 +52,7 @@ function User(){
     if(user && user.id && user.name && user.password){
       //if such user exists, generate the token.
       var token = jwt.sign(user, secret, {
-          expiresInMinutes: 10 // expires in 24 hours
+          expiresIn: 60 // time before expiration
       });
 
       //Send user info along with the token.
