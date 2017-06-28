@@ -1,7 +1,6 @@
 var express = require('express');
 var bodyParser = require("body-parser");
 var morgan = require('morgan');
-var jwt = require('jsonwebtoken');
 var app = express();
 
 // get an instance of the router for api routes

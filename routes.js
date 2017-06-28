@@ -17,6 +17,12 @@ var UserAPIs = function(express){
     var id = req.params.id;
 		User.getOne(id, res);
 	});
+
+  //Authenticate user.
+  express.post('/authenticate', function (req, res) {
+    var userObj = req.body;
+		User.authenticate(userObj, res);
+	});
 };
 
 module.exports = {
