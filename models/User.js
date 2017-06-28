@@ -1,5 +1,8 @@
 var jwt = require('jsonwebtoken');
 
+//Secret for JWT.
+var {secret} = require('./../config');
+
 //User Array. This will mimmic a call to a DB to fetch users.
 var users = [
   {id: 1, name: 'Hervinho', password: '1234'},
@@ -7,7 +10,7 @@ var users = [
   {id: 3, name: 'Eren Jaeger', password: 'a1b2'}
 ];
 
-var secret = 'ue7r39r39484333-,';
+//var secret = 'ue7r39r39484333-,';
 
 function User(){
   //get all users.
@@ -52,7 +55,7 @@ function User(){
     if(user && user.id && user.name && user.password){
       //if such user exists, generate the token.
       var token = jwt.sign(user, secret, {
-          expiresIn: 60 // time before expiration
+          expiresIn: "1h" // time before expiration
       });
 
       //Send user info along with the token.
