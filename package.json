@@ -1,7 +1,7 @@
 {
   "name": "node-jwt-example",
   "version": "1.0.0",
-  "description": "Example of authentication using JWT and Passport",
+  "description": "Example of authentication using JWT",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
